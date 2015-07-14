@@ -38,10 +38,15 @@
 		</div>
 	</div>
 	
+		<input type="button" id="prompt" value="Okienko Prompt" />
+	
 	<script type="text/javascript">
 	
 	
-
+	 function isInt(n){
+	        return Number(n)===n && n%1===0;
+	 }
+	
 	function podajImie() {
 		var imie = prompt("Podaj imie:")
 		if(imie){
@@ -76,18 +81,21 @@
 		  this.name = _name;
 		  this.surname = _surname;
 		  this.age = _age;
-		  this.przedstawSie = function(){
+		  this.przedstawSie(){
 		   console.log(name + ' ' + surname + ' lat ' + age);
 		  }
-	}
 		  
 	var imie = podajImie();
 	console.log(imie);
-	var nazwisko = podajNazwisko();
-	console.log(nazwisko);
-	var wiek = podajWiek();
-	console.log(wiek);
-	var osoba = new czlowiek(imie, nazwisko, wiek);
+	
+	
+	document.getElementById('prompt').onclick = function() {
+        podajImie();
+        podajNazwisko();
+        podajWiek();
+    }
+	
+	
 	</script>
 </body>
 </html>

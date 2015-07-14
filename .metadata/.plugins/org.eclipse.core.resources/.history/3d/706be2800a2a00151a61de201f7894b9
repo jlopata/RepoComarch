@@ -87,7 +87,7 @@
 	console.log(nazwisko);
 	var wiek = podajWiek();
 	console.log(wiek);
-	var osoba = new czlowiek(imie, nazwisko, wiek);
+	var osoba = new _czlowiek(imie, nazwisko, wiek);
 	</script>
 </body>
 </html>

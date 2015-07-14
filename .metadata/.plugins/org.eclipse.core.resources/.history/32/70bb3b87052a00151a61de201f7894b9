@@ -38,56 +38,20 @@
 		</div>
 	</div>
 	
+		<input type="button" id="prompt" value="Okienko Prompt" />
+	
 	<script type="text/javascript">
-	
-	
-
-	function podajImie() {
-		var imie = prompt("Podaj imie:")
-		if(imie){
-			return imie;
-		}
-		else{
-			podajImie();
-		}
-	}
-	
-	function podajNazwisko() {
-		var nazwisko = prompt("Podaj nazwisko:")
-		if(nazwisko){
-			return nazwisko;
-		}
-		else{
-			podajNazwisko();
-		}
-	}
-	
-	function podajWiek() {
-		var wiek = prompt("Podaj wiek:")
-		if(wiek && !isNaN(wiek)){
-			return wiek;
-		}
-		else{
-			podajWiek();
-		}
-	}
-	
-	function czlowiek(_name, _surname, _age){
-		  this.name = _name;
-		  this.surname = _surname;
-		  this.age = _age;
-		  this.przedstawSie = function(){
-		   console.log(name + ' ' + surname + ' lat ' + age);
-		  }
-	}
-		  
-	var imie = podajImie();
-	console.log(imie);
-	var nazwisko = podajNazwisko();
-	console.log(nazwisko);
-	var wiek = podajWiek();
-	console.log(wiek);
-	var osoba = new czlowiek(imie, nazwisko, wiek);
+	function oknoPrompt() {
+	    var imie = prompt('Podaj swoje imię:');
+	        if (imie != null) {
+	            alert('Witaj ' + imie);
+	        } else {
+	            function oknoPrompt();
+	        }
+	    }
+	document.getElementById('prompt').onclick = function() {
+        oknoPrompt()
+    }
 	</script>
 </body>
 </html>
